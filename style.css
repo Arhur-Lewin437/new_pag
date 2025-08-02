@@ -1,0 +1,177 @@
+body {
+  margin: 0; /* Elimina el margen predeterminado del navegador */
+  padding: 0; /* Elimina el padding predeterminado */
+  font-family: 'Segoe UI', sans-serif; /* Fuente principal para todo el sitio */
+  line-height: 1.6; /* Espacio vertical entre líneas para mejor legibilidad */
+  background-color: #e3f2fd; /* Fondo azul claro suave */
+  color: #0d3b66; /* Color de texto azul marino suave */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho y alto total */
+}
+
+/*     Encabezado principal       */
+.hero {
+  background: linear-gradient(135deg, #bbdefb, #90caf9);
+  color: #0d3b66; /* lo quele da color */
+  padding: 60px 20px; /* Espaciado arriba y abajo de 60px, y a los lados 20px */
+  text-align: center; /* Centrar el texto dentro del header */
+}
+
+/*    Título principal  */
+.logo-titulo h1 { /* selector que indica que se van a aplicar estilos a los elementos <h1> que esten dentro de un elemento con clase logo-titulo (no me mates taco)*/
+  font-size: 3m; /* Tamaño del título principal */
+  font-weight: 800; 
+  margin: 0.5em 0; /* Márgenes arriba y abajo para separación */
+  background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Degradado azul horizontal */
+  -webkit-background-clip: text; /* Recorta el fondo para que solo se vea en el texto */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto para mostrar el fondo */
+  text-shadow: 2px 2px 4px rgba(13, 59, 102, 0.3); /* Sombra suave para darle profundidad */
+}
+
+/*           Botón principal           */
+
+.hero .btn-principal {
+  display: inline-block; /* Que se comporte como un bloque en línea */
+  margin-top: 20px; /* Separación arriba del botón */
+  padding: 12px 24px; /* Espaciado interno 12px vertical 24px horizontal */
+  background-color: #1976d2; /* Color azul medio */
+  color: white; /* color del texto*/
+  text-decoration: none; /* Quita subrayado del link */
+  border-radius: 25px; /* redondea los bordes  */
+  font-weight: bold; 
+  transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+/* ligero cambio de coloal pasar el cursor */
+.hero .btn-principal:hover {
+  background-color: #1565c0; 
+}
+
+/*            Menú principal         */
+
+.menu-principal {
+  background-color: #0d3b66; /* Fondo */
+  padding: 10px 0; /* Espaciado arriba y abajo */
+  text-align: center; /* Centrar el menú */
+}
+
+/* Quita vinetas y márgenes de la lista desordenada */
+.menu-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elementos del menú en línea */
+.menu-principal li {
+  display: inline-block; /* Alinea horizontalmente */
+  margin: 0 15px; /* Espaciado horizontal entre cada opción */
+}
+
+/* Estilos de los enlaces */
+.menu-principal a {
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Negrita */
+  transition: color 0.3s ease; /* Transición suave  */
+}
+
+/* Color al pasar el mouse */
+.menu-principal a:hover {
+  color: #bbdefb; /* Azul  */
+}
+
+/*              Contenido              */
+
+.content {
+  padding: 40px 20px; /* Espaciado interno del contenido */
+  text-align: center; /* Centrar textos */
+}
+
+/* Estilo para los subtítulos */
+.content h2 {
+  color: #1565c0; 
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Párrafos con ancho centrado */
+.content p {
+  max-width: 800px; /* Máximo ancho para que no se extienda mucho */
+  margin: 0 auto 20px; /* Centrado horizontal y espacio debajo */
+}
+
+
+/*           Imagen          */
+
+.resumen .servicio {
+  margin-top: 30px; /* Espacio arriba */
+}
+
+/* Contenedor de la imagen  */
+.imagen-con-texto {
+  position: relative; /* Para posicionar el texto encima */
+  overflow: hidden; /* Oculta lo que se salga */
+  display: inline-block; /* Se ajusta al contenido */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease; /* Transición suave para transformaciones */
+  max-width: 100%; /* Que no se salga del contenedor */
+}
+
+/* Imagen dentro del contenedor */
+.imagen-con-texto img {
+  display: block; /* Elimina espacio debajo de la imagen */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene proporción */
+  transition: transform 0.4s ease; /* Transición para el zoom */
+}
+
+/* Zoom suave al pasar el mouse sobre la imagen */
+.imagen-con-texto:hover img {
+  transform: scale(1.05); /* Agranda la imagen ligeramente */
+}
+
+/*              Pie de página      */
+footer {
+  background-color: #0d3b66; 
+  color: white; 
+  text-align: center; /* Centrado */
+  padding: 20px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño de fuente  */
+}
+
+/*           Diseño responsivo         */
+
+/* Para pantallas menores o iguales a 768px (tablets móviles) */
+@media (max-width: 768px) { /* media querys como dijo el taco */
+  .menu-principal li {
+    display: block; /* Menú vertical */
+    margin: 10px 0; /* Separación vertical */
+  }
+
+  .hero, .content {
+    padding: 30px 15px; /* Menos padding para pantallas chicas (el padding es el espacio interior entre el contenido de un elemento y su borde)*/
+  }
+
+  .logo-titulo h1 {
+    font-size: 2em; /* Reduce tamaño del título */
+  }
+
+  .hero .btn-principal {
+    padding: 10px 20px; /* Botón más pequeño */
+  }
+
+  .content h2 {
+    font-size: 1.4em; /* Reduce tamaño subtítulos */
+  }
+}
+
+/* Para pantallas menores o iguales a 480px (móviles de hace un chingo) */
+@media (max-width: 480px) {
+  .logo-titulo h1 {
+    font-size: 1.5em; /* Título más pequeño */
+  }
+
+  .hero .btn-principal {
+    font-size: 0.9em; /* Boton mas pequeño */
+  }
+}
