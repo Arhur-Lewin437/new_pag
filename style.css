@@ -17,8 +17,8 @@ body {
 }
 
 /*    Título principal  */
-.logo-titulo h1 { /* selector que indica que se van a aplicar estilos a los elementos <h1> que esten dentro de un elemento con clase logo-titulo (no me mates taco)*/
-  font-size: 3m; /* Tamaño del título principal */
+.logo-titulo h1 { /* selector que indica que se van a aplicar estilos a los elementos <h1> que esten dentro de un elemento con clase logo-titulo (no me mates taco)  TACO: Asiganle una clase mejor y no te mato (ej: .titular o .encabezado) */
+  font-size: 3m; /* Tamaño del título principal */ /* TACO: Unidad de medida "m" no existe */
   font-weight: 800; 
   margin: 0.5em 0; /* Márgenes arriba y abajo para separación */
   background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Degradado azul horizontal */
