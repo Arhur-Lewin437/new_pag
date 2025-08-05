@@ -1,0 +1,202 @@
+/* ==== Estilo general de la página ==== */
+body {
+  margin: 0; 
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif; 
+  line-height: 1.6; 
+  background-color: #e3f2fd; 
+  color: #0d3b66; 
+  box-sizing: border-box; 
+}
+
+/* ==== Encabezado principal ==== */
+header {
+  background: linear-gradient(135deg, #bbdefb, #90caf9); 
+  color: #0d3b66; /* Color del texto */
+  padding: 40px 20px; /* Espaciado interno amplio */
+  text-align: center; /* Centrar texto */
+}
+
+header h1 {
+  font-size: 3.2em; /* Tamaño grande para título principal */
+  font-weight: 900; /* Negrita extra */
+  margin: 0; /* Sin margen externo */
+  background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Degradado de texto */
+  -webkit-background-clip: text; /* Aplica degradado solo en algunos navegadores (quien utiliza internet Explorer?) pensaba que fire fox estaba basado en Chromemium. Te falle linux */
+  -webkit-text-fill-color: transparent; /* Hace transparente el relleno para mostrar degradado */
+  text-shadow: 3px 3px 8px rgba(13, 59, 102, 0.4);
+  letter-spacing: 2px; /* Espacio entre letras */
+  text-transform: uppercase; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente secundaria */
+  transition: color 0.3s ease; /* Transición suave si cambia color */
+}
+
+/* ==== Menú principal ==== */
+.menu-principal {
+  background-color: #0d3b66; /* Fondo azul oscuro */
+  padding: 10px 0; /* Espaciado vertical */
+  text-align: center; /* Centrar enlaces */
+}
+
+.menu-principal ul {
+  list-style: none; /* Quitar viñetas */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+}
+
+.menu-principal li {
+  display: inline-block; /* Mostrar elementos en línea como bloques */
+  margin: 0 15px; /* Separación horizontal entre enlaces */
+}
+
+.menu-principal a {
+  color: white; 
+  text-decoration: none;
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+.menu-principal a:hover {
+  color: #bbdefb; /* Azul claro al pasar el cursor */
+}
+
+/* ==== Contenido principal ==== */
+main {
+  padding: 40px 20px; /* Espaciado interno */
+  max-width: 1000px; /* Máximo ancho para centrar contenido */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+main h2 {
+  color: #1565c0; 
+  font-size: 1.8em; 
+  margin-top: 40px; 
+  text-align: center; 
+}
+
+main h3 {
+  color: #0d47a1; 
+  margin-top: 30px; 
+  font-size: 1.3em; 
+  text-align: center; /* Centrar subtítulos */
+}
+
+main p {
+  font-size: 1.15em; 
+  line-height: 1.8; 
+  text-align: justify; 
+  margin: 24px auto; 
+  max-width: 800px; /* Ancho máximo */
+  background: #f7fbff; 
+  padding: 20px 25px; 
+  border: none; /* Sin borde */
+  border-radius: 0; /* Sin bordes redondeados */
+  box-shadow: none; 
+  font-family: 'Merriweather', serif; 
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+
+main p:hover {
+  background-color: #eaf4fb; 
+}
+
+/* ==== Lista de valores ==== */
+main ul {
+  list-style: disc inside; /* Viñetas dentro del área del texto */
+  padding-left: 20px; /* Espacio a la izquierda */
+  margin: 20px auto; /* Margen vertical y centrado horizontal */
+  max-width: 800px; /* Ancho máximo */
+}
+
+main li {
+  margin-bottom: 10px; /* Espacio entre ítems */
+}
+
+/* ==== Imágenes del equipo ==== */
+main img {
+  display: block; /* Que las imagenes se comporten como bloques */
+  max-width: 250px; /* Tamaño máximo */
+  width: 100%; /* va a ocupar el 100% del ancho disponible de su contenedor, esto hara que se ajuste automaticamente al tamano de la pantalla */
+  height: auto; /* Mantener proporción */
+  margin: 20px auto 10px; /* Separación y centrado */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  transition: transform 0.4s ease; /* Transición suave para animación */
+}
+
+main img:hover {
+  transform: scale(1.05); /* Zoom suave al pasar el cursor */
+}
+
+main h3 + p + p {
+  font-style: italic; /* Cursiva */
+  color: #333; 
+  text-align: center; /* Centrar texto */
+}
+
+/* ==== Pie de pagina ==== */
+footer {
+  background-color: #0d3b66; 
+  color: white; 
+  text-align: center; /* Centrar texto */
+  padding: 20px; 
+  font-size: 0.9em; 
+  margin-top: 40px; 
+}
+
+/* ====  diseno responsivo ==== */
+@media (max-width: 600px) {
+  body {
+    font-size: 90%; /* Texto un poco mas pequeño */
+  }
+
+  header {
+    padding: 25px 10px; 
+  }
+
+  header h1,
+  .logo-titulo h1 {
+    font-size: 1.8em; /* Tamaño menor en movil */
+    letter-spacing: 1px; /* Menos espacio entre letras */
+  }
+
+  .menu-principal li {
+    display: block; /* Menú vertical en móvil */
+    margin: 10px 0; /* Espaciado vertical */
+  }
+
+  main h2,
+  main h3,
+  .content h2 {
+    text-align: left; /* Titulares alineados a la izquierda */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.4em; /* Tamaño reducido en movil */
+  }
+
+  main p {
+    font-size: 1em; 
+    padding: 16px 18px; 
+  }
+
+  main img {
+    max-width: 100%; /* Imagen al 100% ancho contenedor */
+    border-radius: 10px; /* Bordes menos redondeados */
+  }
+
+  .hero,
+  .content {
+    padding: 30px 15px;
+  }
+
+  .hero .btn-principal {
+    padding: 10px 20px; 
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 15px 10px; 
+  }
+}
+
