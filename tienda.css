@@ -1,7 +1,5 @@
-
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   background-color: #e3f2fd;
@@ -49,8 +47,7 @@ header {
 
 .menu-principal ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 }
 
 .menu-principal li {
@@ -78,32 +75,19 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-#carrito-tienda h2 {
-  margin-top: 0;
-  color: #1565c0;
-}
-
-#lista-carrito {
-  list-style: none;
-  padding: 0;
-}
-
-#total {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
 #productos {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas */
+  gap: 20px;
 }
 
 #productos h2 {
+  grid-column: 1 / -1; /* Que el h2 ocupe toda la fila */
   text-align: center;
-  color: #1565c0;
-  margin-bottom: 25px;
-  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .producto {
@@ -114,10 +98,8 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s ease;
   gap: 10px;
+  transition: all 0.25s ease;
 }
 
 .producto:hover {
@@ -126,20 +108,11 @@ header {
 }
 
 .producto img {
-  width: 100%;
   max-width: 180px;
-  height: auto;
+  margin: 0 auto;
   border-radius: 8px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
-}
-
-.producto p {
-  margin: 0;
-  color: #0d3b66;
-  font-weight: bold;
-  text-align: center;
 }
 
 .producto button {
@@ -166,22 +139,21 @@ footer {
   font-size: 0.9em;
 }
 
-
-@media (min-width: 768px) {
+/* Responsivo */
+@media (max-width: 991px) {
   #productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas tablets */
   }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  #productos {
+    grid-template-columns: 1fr; /* 1 columna móviles */
+  }
   .menu-principal li {
     display: block;
     margin: 10px 0;
   }
-
   header {
     flex-direction: column;
     gap: 10px;
