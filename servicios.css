@@ -1,0 +1,234 @@
+/* elimina margenes y paddings predeterminados, define fuente y color general reutilice algo de código para este css, como las Transición suaves, Bordes redondeados aun que los estilos genrales de la pagina como en todo el sitio web siguen siendo los mismos y le agregue un nuevo deiseno al menu que probable mente cambie en los demas  */
+body {
+  margin: 0; 
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif; 
+  line-height: 1.6; 
+  background-color: #e3f2fd; 
+  color: #0d3b66; 
+  box-sizing: border-box; 
+}
+
+header {
+  background: linear-gradient(135deg, #bbdefb, #90caf9); 
+  color: #0d3b66;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.2em; 
+  font-weight: 900;
+  margin: 0 0 10px 0; 
+  background: linear-gradient(90deg, #0d47a1, #42a5f5);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 8px rgba(13, 59, 102, 0.4); 
+  letter-spacing: 2px; 
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.3s ease; 
+}
+
+
+header p {
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 600;
+  color: #1565c0; 
+}
+
+nav[aria-label="Menú principal"] {
+  background-color: #0d3b66; 
+  padding: 10px 0;
+  text-align: center; 
+}
+
+
+nav[aria-label="Menú principal"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav[aria-label="Menú principal"] li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+
+nav[aria-label="Menú principal"] a {
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Efecto suave al cambiar color */
+  padding: 6px 10px; /* Relleno para hacer clic más fácil */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Cambia fondo y texto al pasar el cursor o si el enlace está activo */
+nav[aria-label="Menú principal"] a:hover,
+nav[aria-label="Menú principal"] a.activo {
+  background-color: #bbdefb;
+  color: #0d3b66;
+}
+
+/* Contenedor principal de contenido: centrado con espacio y ancho máximo */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+main h2 {
+  color: #1565c0;
+  font-size: 2em;
+  margin-top: 40px;
+  text-align: center;
+}
+
+main .servicio {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Botón que se usa para mostrar o ocultar información adicional */
+.btn-toggle {
+  display: block;
+  margin: 15px auto 0 auto; /* Centrado horizontal */
+  background-color: #1976d2; 
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px; /* Botón redondeado */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  user-select: none; /* Evita que el texto se seleccione al hacer clic rápido */
+}
+
+/* Cambio de color del botón al pasar el cursor */
+.btn-toggle:hover {
+  background-color: #1565c0;
+}
+
+/* Contenido adicional dentro del servicio, con margen y color */
+.info {
+  margin-top: 20px;
+  color: #0d3b66;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Figura para imagen con leyenda */
+.info figure {
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+/* Imagen dentro de la información, centrada y con borde redondeado y sombra */
+.info img {
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 8px auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+/* Efecto zoom suave al pasar el cursor sobre la imagen */
+.info img:hover {
+  transform: scale(1.05);
+}
+
+.info figcaption {
+  font-style: italic;
+  font-size: 1em;
+  color: #1565c0;
+}
+
+/* Lista dentro de la información, con viñetas y margen para separar */
+.info ul {
+  list-style: disc inside;
+  padding-left: 20px;
+  margin: 10px auto 0 auto;
+  max-width: 800px;
+  color: #0d3b66;
+}
+
+/* Espacio entre elementos de la lista */
+.info li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+footer {
+  background-color: #0d3b66;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  /* Reduce tamaño general de fuente para móviles */
+  body {
+    font-size: 90%;
+  }
+
+  /* Menos padding en encabezado para que ocupe menos espacio */
+  header {
+    padding: 25px 10px;
+  }
+
+  /* Título principal más pequeño y menos espacio entre letras */
+  header h1 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+
+  /* Menú vertical con más espacio para cada item */
+  nav[aria-label="Menú principal"] li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Más padding en enlaces para que sean fáciles de tocar */
+  nav[aria-label="Menú principal"] a {
+    padding: 10px 15px;
+  }
+
+  /* Títulos secundarios alineados a la izquierda y tamaño reducido */
+  main h2 {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.6em;
+  }
+
+  /* Menos padding y margen en servicios para ahorrar espacio */
+  main .servicio {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  /* Imagenes más anchas y bordes menos redondeados */
+  .info img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Pie de página con texto más pequeño y menos padding */
+  footer {
+    font-size: 0.8em;
+    padding: 15px 10px;
+  }
+}
+

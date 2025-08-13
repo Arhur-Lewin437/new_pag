@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | AlmaViva Wellness Center</title>
+  <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+  <header>
+    <h1>Servicios | AlmaViva Wellness Center</h1>
+    <p>Descubre nuestras experiencias para tu bienestar en AlmaViva Wellness Center</p>
+  </header>
+
+  <nav aria-label="Menú principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html" class="activo" aria-current="page">Servicios</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <section class="servicio">
+      <h2>Clases y Entrenamiento Corporal</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure><!-- 
+  Aquí usamos <figure> para juntar la imagen con su explicación-->
+          <img src="imagenes/clases y entrenamiento.PNG" alt="Personas practicando yoga y entrenamiento físico">
+          <figcaption>Yoga, pilates, entrenamiento personalizado y más</figcaption><figcaption> <!-- es como el título o la frase que dice qué muestra la imagen
+  así cualquiera entiende mejor de qué va -->
+        </figure>
+        <ul>
+          <li>Yoga: Vinyasa, Hatha, Yin Yoga, Restaurativo, para principiantes</li>
+          <li>Pilates: Mat pilates, pilates terapéutico</li>
+          <li>Entrenamiento personalizado: fuerza, flexibilidad, movilidad, pérdida de peso</li>
+          <li>Stretching y movilidad articular</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <h2>Nutrición y Salud Integral</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure>
+          <img src="imagenes/Nutrición y Salud Integral.PNG" alt="Frutas y alimentos saludables">
+          <figcaption>Consulta de nutrición, planes alimenticios y talleres de cocina saludable</figcaption>
+        </figure>
+        <ul>
+          <li>Consulta de nutrición holística personalizada</li>
+          <li>Planes alimenticios: detox, aumento de energía, control de peso</li>
+          <li>Asesoría en alimentación consciente y mindful eating</li>
+          <li>Suplementación natural y superfoods</li>
+          <li>Talleres de cocina saludable y vegana</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <h2>Terapias y Masajes</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure>
+          <img src="imagenes/masajes.JPG" alt="Masaje relajante con aceites esenciales">
+          <figcaption>Masajes para relajación y bienestar físico</figcaption>
+        </figure>
+        <ul>
+          <li>Masaje relajante y anti-estrés</li>
+          <li>Masaje terapéutico para dolor muscular</li>
+          <li>Masaje con piedras calientes</li>
+          <li>Reflexología podal</li>
+          <li>Masaje ayurvédico y tailandés</li>
+          <li>Aromaterapia personalizada</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <h2>Terapias Holísticas y Energéticas</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure>
+          <img src="imagenes/Terapias-Holisticas.PNG" alt="Cuencos tibetanos y cristales para terapia energética">
+          <figcaption>Técnicas para armonizar cuerpo y mente</figcaption>
+        </figure>
+        <ul>
+          <li>Reiki (niveles 1, 2 y maestría)</li>
+          <li>Sanación con cristales y gemoterapia</li>
+          <li>Terapia de cuencos tibetanos y de cuarzo</li>
+          <li>Limpieza energética y armonización de chakras</li>
+          <li>Meditación guiada terapéutica</li>
+          <li>Sanación con péndulo hebreo</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <h2>Talleres y Cursos Especializados</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure>
+          <img src="imagenes/talleres.PNG" alt="Personas participando en un taller de bienestar">
+          <figcaption>Actividades prácticas y educativas</figcaption>
+        </figure>
+        <ul>
+          <li>Mindfulness y meditación</li>
+          <li>Respiración consciente (pranayama)</li>
+          <li>Creación de velas y jabones artesanales</li>
+          <li>Herbolaria y medicina natural</li>
+          <li>Autoconocimiento y crecimiento personal</li>
+          <li>Retiros de bienestar</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <h2>Servicios Online</h2>
+      <button class="btn-toggle" aria-expanded="false" onclick="toggleInfo(this)">Ver más</button>
+      <div class="info" hidden>
+        <figure>
+          <img src="imagenes/servicios online.JPG" alt="Clases de bienestar transmitidas en línea">
+          <figcaption>Bienestar desde casa</figcaption>
+        </figure>
+        <ul>
+          <li>Clases de yoga y meditación en vivo por Zoom</li>
+          <li>Consultas de nutrición online</li>
+          <li>Cursos grabados de bienestar</li>
+          <li>Programas de entrenamiento y alimentación a distancia</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AlmaViva Wellness Center. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="servicios.js"></script>
+</body>
+</html>
