@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlmaViva Wellness Center</title>
-    <link rel="stylesheet" href="calculadora.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlmaViva Wellness Center</title>
+  <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
 
     <header>
-        <h1>Calculadora | AlmaViva Wellness Center</h1>
-        <p>Calcula el plan perfecto para ti según tus objetivos</p>
+    <h1>Calculadora | AlmaViva Wellness Center</h1>
+    <p>Calcula el plan perfecto para ti según tus objetivos</p>
     </header>
 
     <nav class="menu-principal" aria-label="Menú principal">
@@ -22,40 +22,49 @@
       <li><a href="calculadora.html" class="activo">Calculadora</a></li>
       <li><a href="tienda.html">Tienda</a></li>
     </ul>
-  </nav>
+    </nav>
 
     <main>
-        <section class="calculadora">
-            <h2>Calcula tu plan mensual</h2>
->
-            <label for="objetivo">Objetivo de salud:</label>
-            <select id="objetivo">
-                <option value="perder_peso">Perder peso</option>
-                <option value="ganar_musculo">Ganar músculo</option>
-                <option value="mantener">Mantenerme en forma</option>
-                <option value="relajacion">Relajación y bienestar</option>
-            </select>
+    <section class="calculadora">
+        <h2>Calcula tu plan mensual</h2>
 
-            <label for="frecuencia">¿Cuántas veces por semana asistirás?</label>
-            <input type="number" id="frecuencia" min="1" max="7" value="1">
+        <label for="objetivo">Objetivo de salud:</label>
+        <select id="objetivo">
+        <option value="perder_peso">Perder peso</option>
+        <option value="ganar_musculo">Ganar músculo</option>
+        <option value="mantener">Mantenerme en forma</option>
+        <option value="relajacion">Relajación y bienestar</option>
+        </select>
 
-            <div class="extras">
-                <label><input type="checkbox" id="nutricionista"> Incluir nutricionista (+$450)</label>
-                <label><input type="checkbox" id="clases_especiales"> Clases especiales (+$500)</label>
-                <label><input type="checkbox" id="evaluacion"> Evaluación y seguimiento (+$300)</label>
-                <label><input type="checkbox" id="ninguno"> Ninguno (+$0)</label>
-            </div>
+        <label for="frecuencia">¿Cuántas veces por semana asistirás?</label>
+        <input type="number" id="frecuencia" min="1" max="7" value="1">
 
-            <button id="calcularBtn">Calcular</button>
+        <p class="servicios">Servicios adicionales:</p>
 
-            <div id="resultado" class="resultado" style="display: none;"></div>
-        </section>
-    </main>
+        <div class="extras">
+        <input type="radio" id="nutricionista" name="extra" value="nutricionista">
+        <label for="nutricionista">Incluir nutricionista (+$450)</label>
 
-    <footer>
-        <p>&copy; 2025 AlmaViva Wellness Center. Todos los derechos reservados.</p>
-    </footer>
+        <input type="radio" id="clases_especiales" name="extra" value="clases_especiales">
+        <label for="clases_especiales">Clases especiales (+$500)</label>
 
-    <script src="calculadora.js"></script>
+        <input type="radio" id="evaluacion" name="extra" value="evaluacion">
+        <label for="evaluacion">Evaluación y seguimiento (+$300)</label>
+
+        <input type="radio" id="ninguno" name="extra" value="ninguno">
+        <label for="ninguno">Ninguno (+$0)</label>
+        </div>
+
+      <button id="calcularBtn">Calcular</button>
+
+      <div id="resultado" class="resultado" style="display: none;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AlmaViva Wellness Center. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="calculadora.js"></script>
 </body>
 </html>
